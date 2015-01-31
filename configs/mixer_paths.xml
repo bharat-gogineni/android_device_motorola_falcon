@@ -79,6 +79,7 @@
 	<ctl name="SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX" value="0" />
 	<ctl name="SLIMBUS_DL_HL Switch" value="0" />
 	<ctl name="MultiMedia1 Mixer INTERNAL_FM_TX" value="0" />
+	<ctl name="MultiMedia2 Mixer INTERNAL_FM_TX" value="0" />
 	<ctl name="INTERNAL_FM_RX Audio Mixer MultiMedia1" value="0" />
 	<ctl name="INTERNAL_FM_RX Audio Mixer MultiMedia5" value="0" />
 	<!-- fm end -->
@@ -157,6 +158,14 @@
 	<path name="audio-record bt-sco-wb">
 		<ctl name="Internal BTSCO SampleRate" value="16000" />
 		<ctl name="MultiMedia1 Mixer INTERNAL_BT_SCO_TX" value="1" />
+	</path>
+
+	<path name="audio-record capture-fm">
+		<ctl name="MultiMedia1 Mixer INTERNAL_FM_TX" value="1" />
+	</path>
+
+	<path name="fm-virtual-record capture-fm">
+		<ctl name="MultiMedia2 Mixer INTERNAL_FM_TX" value="1" />
 	</path>
 
 	<path name="voice-call">
@@ -354,8 +363,8 @@
 		<ctl name="SLIM RX1 MUX" value="AIF1_PB" />
 		<ctl name="SLIM RX2 MUX" value="AIF1_PB" />
 		<ctl name="SLIM_0_RX Channels" value="Two" />
-		<ctl name="RX1 MIX1 INP1" value="RX2" />
-		<ctl name="RX2 MIX1 INP1" value="RX1" />
+		<ctl name="RX1 MIX1 INP1" value="RX1" />
+		<ctl name="RX2 MIX1 INP1" value="RX2" />
 		<ctl name="CLASS_H_DSM MUX" value="RX_HPHL" />
 		<ctl name="RDAC3 MUX" value="DEM2" />
 		<ctl name="HPHL DAC Switch" value="1" />
@@ -411,8 +420,8 @@
 		<ctl name="SLIM RX1 MUX" value="AIF1_PB" />
 		<ctl name="SLIM RX2 MUX" value="AIF1_PB" />
 		<ctl name="SLIM_0_RX Channels" value="Two" />
-		<ctl name="RX1 MIX1 INP1" value="RX2" />
-		<ctl name="RX2 MIX1 INP1" value="RX1" />
+		<ctl name="RX1 MIX1 INP1" value="RX1" />
+		<ctl name="RX2 MIX1 INP1" value="RX2" />
 		<ctl name="CLASS_H_DSM MUX" value="RX_HPHL" />
 		<ctl name="RDAC3 MUX" value="DEM2" />
 		<ctl name="HPHL DAC Switch" value="1" />
@@ -438,9 +447,9 @@
 		<ctl name="SLIM TX2 MUX" value="DEC1" />
 		<ctl name="DEC1 MUX" value="ADC1" />
 		<ctl name="DEC2 MUX" value="ADC3" />
-		<ctl name="ADC1 Volume" value="8" />
+		<ctl name="ADC1 Volume" value="19" />
 		<ctl name="ADC2 Volume" value="0" />
-		<ctl name="ADC3 Volume" value="8" />
+		<ctl name="ADC3 Volume" value="19" />
 	</path>
 
 	<path name="camcorder-mic">
@@ -475,6 +484,9 @@
 	</path>
 
 	<path name="bt-sco-mic-wb">
+	</path>
+
+	<path name="capture-fm">
 	</path>
 
 	<!-- Dual MIC devices -->
